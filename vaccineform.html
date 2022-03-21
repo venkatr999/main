@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="vaccineform.css">
+    <script > 
+    function validate()
+    {
+      var pnr=/^[7-9]{1}\d{9}$/
+      var phname=document.getElementById("pnum").value;
+      var anor=/^[1-9]{1}\d{15}$/
+      var ano=document.getElementById("ano").value;
+      if(name.match())
+      {
+        
+      }
+      else
+      {
+        document.getElementById("lbtext1").innerHTML = "*Invalid";
+        document.getElementById("lbtext1").style.visibility = "visible";
+        document.getElementById("lbtext1").style.color = "red";
+      }
+      if(phname.match(pnr))
+      {
+        
+      }
+      else
+      {
+        document.getElementById("lbtext2").innerHTML = "*Invalid";
+        document.getElementById("lbtext2").style.visibility = "visible";
+        document.getElementById("lbtext2").style.color = "red";
+      }
+      if(ano.match(anor))
+      {
+      }
+      else
+      {
+        document.getElementById("lbtext3").innerHTML = "*Invalid";
+        document.getElementById("lbtext3").style.visibility = "visible";
+        document.getElementById("lbtext3").style.color = "red";
+      }
+}
+    </script>
+</head>
+<body>
+   
+    <div class="container">
+        <h1 align="center">VACCINATION SLOT  BOOKING</h1>
+        <form action="vaccineform.php" method="post">
+        FullName<input type="text" placeholder="Enter full name" id="uname" name="uname">
+        <br>
+
+        Pho Number <input type="text" placeholder="enter phone number" id="pnum" name="ph">
+        <label id="lbtext2"  style="color: red; visibility:hidden;" ></label>
+        <br>
+
+         GENDER 
+         <select name="gender" class="gender" style="margin-left: 40px; border-radius: 10px; width: 40%;height: 25px; border-color:crimson" required>
+          <option id="m">male
+          <option id="f">female
+          </select> 
+        <br>         
+         Date of birth<input type="date" id="dob" name="dob"><br>
+        Aadhar Number<input type="text" class="ano" id="ano" name="anum">
+        <label id="lbtext3"  style="color: red; visibility:hidden;" ></label><br>
+         DOSE<select name="dose" class="dose" style="margin-left: 40px; border-radius: 10px; width: 40%;height: 25px; border-color:crimson">
+	  <option id="f1">first
+	  <option id="s2">second
+	  </select> 
+         <br><br>
+         Date of vaccination<input type="date" id="dov" name="dov"><br>
+         ADDRESS<br><textarea rows="8" cols="50" placeholder="enter full address including pincode" style="margin-left: 100px;" name="address"></textarea>
+         <br> <br>
+         <center><button type="submit">Submit</button></center>
+         
+        </form>
+        </div>
+    </body>
+    </html>
